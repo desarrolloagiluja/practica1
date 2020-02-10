@@ -34,58 +34,62 @@ undum.game.situations = {
     start: new undum.SimpleSituation (
 	"<h1>El castillo está¡ cerrado a cal y canto... aunque te piden el santo y seÃ±a:</h1>\
 	<p class='dialogo'>- Â¿CuÃ¡nto son 3+4?</p>\
-        <p>Ante tamaÃ±a afrenta tu respuesta podrÃ­a ser  \
-        <a href='incorrecta01'>que no te has traido la calculadora</a>, y tambiÃ©n que 3+4 <a href='patiodearmas'>suman 7</a> \
+    <p>Ante tamaÃ±a afrenta tu respuesta podrÃ­a ser  \
+    <a href='incorrecta01'>que no te has traido la calculadora</a>, y tambiÃ©n que 3+4 <a href='patiodearmas'>suman 7</a> \
 	(a juzgar por los 4 dedos levantados de tu mano derecha y los 3 de la izquierda), \
 	aunque tampoco estarÃ­a mal confesar que \
 	<a href='incorrecta02'>aquel dÃ­a no fuiste a la escuela</a> pues te quedaste cuidando a tu lobo huargo.</p>"
 	),
-		incorrecta01: new undum.SimpleSituation(
-			"<p>Tras buscar por largo rato entre tus pertenencias, con voz que transmite poca tranquilidad dices a los guardias de la puerta:</p>\
-			<p class='dialogo personaje'>- Fijaos que pertrechÃ© mi montura con toda suerte de abalorios, mÃ¡s olvideme el calculatorum...</p>\
-			<p>Ni que decir tiene, que los guardias pasan de ti y vuelven a su quehacer en el castillo.</p>\
-			<p>En fin... <a href='santoysenia'>puedes intentarlo de nuevo</a> o <a href='finalizar'>finalizar la partida</a>.</p>s"
-		),
-		incorrecta02: new undum.SimpleSituation(
-			"<p>Aunque no tienes ni idea de quÃ© es una escuela, ni de si se come o no, intentas ser convincente mientras dices:</p>\
-			<p class='dialogo personaje'>- Fijaos que aun frecuentando continuamente las clases de maese VÃ­ctor, \
-			diose la circunstancia de que el dÃ­a que tal explicaron hallÃ¡bame cuidando de mi lobo huargo.</p>\
+	
+	incorrecta01: new undum.SimpleSituation(
+	"<p>Tras buscar por largo rato entre tus pertenencias, con voz que transmite poca tranquilidad dices a los guardias de la puerta:</p>\
+	<p class='dialogo personaje'>- Fijaos que pertrechÃ© mi montura con toda suerte de abalorios, mÃ¡s olvideme el calculatorum...</p>\
 	<p>Ni que decir tiene, que los guardias pasan de ti y vuelven a su quehacer en el castillo.</p>\
-			<p>En fin... <a href='santoysenia'>puedes intentarlo de nuevo</a> o <a href='finalizar'>finalizar la partida</a>.</p>"
-		),
+	<p>En fin... <a href='santoysenia'>puedes intentarlo de nuevo</a> o <a href='finalizar'>finalizar la partida</a>.</p>s"
+	),
+	
+	incorrecta02: new undum.SimpleSituation(
+	"<p>Aunque no tienes ni idea de quÃ© es una escuela, ni de si se come o no, intentas ser convincente mientras dices:</p>\
+	<p class='dialogo personaje'>- Fijaos que aun frecuentando continuamente las clases de maese VÃ­ctor, \
+	diose la circunstancia de que el dÃ­a que tal explicaron hallÃ¡bame cuidando de mi lobo huargo.</p>\
+	<p>Ni que decir tiene, que los guardias pasan de ti y vuelven a su quehacer en el castillo.</p>\
+	<p>En fin... <a href='santoysenia'>puedes intentarlo de nuevo</a> o <a href='finalizar'>finalizar la partida</a>.</p>"
+	),
 		
-		finalizar: new undum.SimpleSituation(
-			"<h1>Fin de la historia</h1>\
-			<p>Pues asÃ­ acaba tu historia en Roca Rivasly. QuizÃ¡, otro dÃ­a, con mÃ¡s tiempo, decidas acabarla del todo</p>\
-			<h1>Fin</h1>"
-		),
-		patiodearmas: new undum.SimpleSituation(
-			"<h1>El patio de armas</h1>\
-			<p>EstÃ¡s dentro del castillo, concretamente en el patio de armas</p>\
-			<p>Los guardias se han quedado mÃ¡s tranquilos al saber que sabes el santo y seÃ±a, asÃ­ que se han ido a dormir... je, je, je...</p>\
-			<p>A tu izquierda, <a href='zonanoble'>puedes acceder a la zona noble del castillo</a>, \
-			mientras a la derecha observas que estÃ¡ <a href='caballerizas'>la entrada a las caballerizas</a>.</p>"
-		),
-		zonanoble: new undum.SimpleSituation(
-			"<h1>La zona noble del castillo</h1>\
-			<p>En este ala de la fortaleza se desarrolla la vida palaciega, ya sabes: la cocina, el comedor, los aposentos, el gimnasio con spa\
-			y la terraza donde se ubican las placas solares... quiero decir, el solarium.</p>",
-			{
-				enter: function( character, system, from ) {
-					if( character.qualities.antorcha ) {
-						system.doLink( "zonanobleantorcha" );
-					} else {
-						system.write( "<p>No obstante, existe un pequeÃ±o problema y es que el arquitecto \
-						en un intento por llevar a cabo la mÃ¡xima expresiÃ³n del minimalismo, \
-						minimizÃ³ todas las ventanas (vamos: que se olvidÃ³ poner ventanas en las paredes)\
-						y dado que no tienes ninguna fuente de luz, no ves ni un pimiento.</p>\
-						<p>No tienes muchas opciones, salvo las de quedarte aquÃ­ esperando o bien <a href='patiodearmas'>salir al patio de armas</a>.</p>");
-					}
+	finalizar: new undum.SimpleSituation(
+	"<h1>Fin de la historia</h1>\
+	<p>Pues asÃ­ acaba tu historia en Roca Rivasly. QuizÃ¡, otro dÃ­a, con mÃ¡s tiempo, decidas acabarla del todo</p>\
+	<h1>Fin</h1>"
+	),
+	
+	patiodearmas: new undum.SimpleSituation(
+	"<h1>El patio de armas</h1>\
+	<p>EstÃ¡s dentro del castillo, concretamente en el patio de armas</p>\
+	<p>Los guardias se han quedado mÃ¡s tranquilos al saber que sabes el santo y seÃ±a, asÃ­ que se han ido a dormir... je, je, je...</p>\
+	<p>A tu izquierda, <a href='zonanoble'>puedes acceder a la zona noble del castillo</a>, \
+	mientras a la derecha observas que estÃ¡ <a href='caballerizas'>la entrada a las caballerizas</a>.</p>"
+	),
+	
+	zonanoble: new undum.SimpleSituation(
+	"<h1>La zona noble del castillo</h1>\
+	<p>En este ala de la fortaleza se desarrolla la vida palaciega, ya sabes: la cocina, el comedor, los aposentos, el gimnasio con spa\
+	y la terraza donde se ubican las placas solares... quiero decir, el solarium.</p>",
+	{
+		enter: function( character, system, from ) {
+			if( character.qualities.antorcha ) {
+				system.doLink( "zonanobleantorcha" );
+			} else {
+				system.write( "<p>No obstante, existe un pequeÃ±o problema y es que el arquitecto \
+				en un intento por llevar a cabo la mÃ¡xima expresiÃ³n del minimalismo, \
+				minimizÃ³ todas las ventanas (vamos: que se olvidÃ³ poner ventanas en las paredes)\
+				y dado que no tienes ninguna fuente de luz, no ves ni un pimiento.</p>\
+				<p>No tienes muchas opciones, salvo las de quedarte aquÃ­ esperando o bien <a href='patiodearmas'>salir al patio de armas</a>.</p>");
 				}
 			}
-		),
+		}
+	),
 
-		zonanobleantorcha: new undum.SimpleSituation( 
+	zonanobleantorcha: new undum.SimpleSituation( 
 					"<p>El insignificante error cometido por el arquitecto al no colocar ni una sola ventana\
 					no es problema para ti que te has procurado una antorcha.</p>\
 					<p class='transient'>Analizas la estancia y compruebas que existe una puerta en la pared norte\
@@ -105,74 +109,38 @@ undum.game.situations = {
 				{
             actions: {
                 'silladeplaya': function( character, system, action) {
-																	system.setCharacterText( "<p>Ahora ya llevas una silla de playa. \
-																														Te vendrÃ¡ bien cuando encuentres...eh... una playa.</p>" );
-																},
+					system.setCharacterText( "<p>Ahora ya llevas una silla de playa. \
+					Te vendrÃ¡ bien cuando encuentres...eh... una playa.</p>" );
+				},
                 'spectrum': function( character, system, action) {
-																	system.setCharacterText( "<p>Â¡QuÃ© buenos salieron los Spectrum! \
-																													Este todavÃ­a funciona.. de hecho, estÃ¡ sin estrenar.\
-																													La ausencia de enchufes en esta Ã©poca podrÃ­a estar \
-																													relacionada con tal estado.</p>" );
-														},
+					system.setCharacterText( "<p>Â¡QuÃ© buenos salieron los Spectrum! \
+					Este todavÃ­a funciona.. de hecho, estÃ¡ sin estrenar.\
+					La ausencia de enchufes en esta Ã©poca podrÃ­a estar \
+					relacionada con tal estado.</p>" );
+				},
                 'latigo': function( character, system, action) {
-																	system.setCharacterText( "<p>Â¡Un lÃ¡tigo puede salvarte de mil apuros! \
-																													Aunque por desgracia, esta aventura no estÃ¡ ambientada en \
-																													el personaje de Indiana Jones, por lo que te va a servir de bien poco.</p>" );
-														},
+					system.setCharacterText( "<p>Â¡Un lÃ¡tigo puede salvarte de mil apuros! \
+					Aunque por desgracia, esta aventura no estÃ¡ ambientada en \
+					el personaje de Indiana Jones, por lo que te va a servir de bien poco.</p>" );
+				},
                 'sombrero': function( character, system, action) {
-																	system.setCharacterText( "<p>Te quitas el yelmo y te colocas el sombrero mejicano.\
-																													Sientes un irrefrenable deseo de cantar \
-																													rancheras, pero sabes que sin tu yelmo \
-																													eres mÃ¡s vulnerable al impacto de las hortalizas.</p>" );
-														},
+					system.setCharacterText( "<p>Te quitas el yelmo y te colocas el sombrero mejicano.\
+					Sientes un irrefrenable deseo de cantar \
+					rancheras, pero sabes que sin tu yelmo \
+					eres mÃ¡s vulnerable al impacto de las hortalizas.</p>" );
+				},
                 'tioserrodrick': function( character, system, action) {
-																	system.setCharacterText( "<p>La compaÃ±Ã­a de Ser Rodrick te harÃ¡ mÃ¡s agradable el camino...\
-																		 o no, teniendo en cuenta	que muriÃ³ hace mÃ¡s de 200 aÃ±os.</p>" );
-																},
-							 	'antorcha': function(character, system, action) {
-															system.setQuality( "antorcha", true );
-															system.setCharacterText("<p>Perfecto. Ahora tienes una antorcha con la que podrÃ¡s iluminar \
-																						las oscuras estancias de la zona noble</p>");
-														}
+					system.setCharacterText( "<p>La compaÃ±Ã­a de Ser Rodrick te harÃ¡ mÃ¡s agradable el camino...\
+					o no, teniendo en cuenta	que muriÃ³ hace mÃ¡s de 200 aÃ±os.</p>" );
+				},
+				'antorcha': function(character, system, action) {
+					system.setQuality( "antorcha", true );
+					system.setCharacterText("<p>Perfecto. Ahora tienes una antorcha con la que podrÃ¡s iluminar \
+					las oscuras estancias de la zona noble</p>");
+				}
 
             }
         }
-		),
-		aposentos: new undum.SimpleSituation(
-			"<h1>Los reales aposentos</h1>\
-			<p>Aunque nadie habrÃ­a dado un duro por que alcanzaras este punto, lo cierto es que aquÃ­ estÃ¡s.</p>\
-			<p>Claro que... esto no va a ser coser y cantar, <em>of course</em>. Dos escaleras justo ante tÃ­ dan acceso\
-			a las dos alcobas de que dispone el castillo (en principio se proyectaron 65 estancias, pero un pequeÃ±o error \
-			del arquitecto hizo que se redujeran... eh... considerablemente).</p>\
-			<p class='transient'>Una vez analizada la situaciÃ³n, es evidente que sÃ³lo puedes \
-			<a href='habrey'>subir a la alcoba de la escalera que queda a la izquierda</a>\
-			o, por el contrario, <a href='habprincesa'>subir a la alcoba que quedarÃ­a a tu derecha</a>. Por supuesto, otras opciones son \
-			<a href='./echar-vistazo' class='once'>echar un vistazo</a> a la estancia en la que estÃ¡s, o \
-			volver a la entrada <a href='zonanoble'>de la zona noble</a>.</p>",
-			{
-				actions: {
-					'echar-vistazo': function enter( character, system, action ) {
-						system.setQuality( "llave", true );
-						system.write( "<p>Mirando detalladamente, observas que en la pared sur de la estancia hay un majestuoso cuadro \
-							de Bob Esponja y, casi sin darte cuenta, te acercas y palpas por detrÃ¡s del mismo. Gracias a tu delicado tacto \
-							descubres una enorme llave de puerta de aposento, que guardas como preciado tesoro para futuros usos.</p>\
-							<p class='transient'>Con la llave en tu poder, vuelves a hacer un anÃ¡lisis de la situaciÃ³n y \
-							nuevamente concluyes que sÃ³lo puedes \
-							<a href='habrey'>subir a la alcoba de la escalera que queda a la izquierda</a>\
-							o, por el contrario, <a href='habprincesa'>subir a la alcoba que quedarÃ­a a tu derecha</a>.\
-							Huelga decir que puedes <a href='./echar-otro-vistazo'>seguir explorando</a> esta estancia o \
-							volver a la entrada <a href='zonanoble'>de la zona noble</a>.</p>");
-							system.setCharacterText("<p>Â¡Perfecto! Te has hecho con una llave que puede abrirte el corazÃ³n de tu princesa... \
-																						o al menos su alcoba.</p>");
-					},
-					'echar-otro-vistazo': "<p>La colecciÃ³n de cuadros de la estancia es, simplemente, impresionante. De hecho, te impresiona que \
-							en un castillo tan grande sÃ³lo haya un simple cuadro y que Ã©ste sea de Bob Esponja.</p>\
-							<p class='transient'>Puedes seguir perdiendo el tiempo en esta estancia o \
-							<a href='habrey'>subir a la alcoba de la escalera que queda a la izquierda</a>, \
-							<a href='habprincesa'>subir a la alcoba que quedarÃ­a a tu derecha</a> o \
-							volver a la entrada <a href='zonanoble'>de la zona noble</a>.</p>"
-				}
-			}
 		),
 		habrey: new undum.SimpleSituation(
 			"<h1>El aposento de la izquierda</h1>\
@@ -187,30 +155,7 @@ undum.game.situations = {
 					}
 				}
 			}
-		),
-		habreyllave: new undum.SimpleSituation(
-			"<p>Con suma destreza, gran sigilo y la llave que te agenciaste, consigues abrir la puerta y entras cautelosamente en la estancia.</p>\
-			<p>Al fondo, a la derecha, observas que hay un lecho en el que alguien duerme placenteramente; te acercas\
-			<a href='./discurso' class='once'> e inicias el pequeÃ±o\
-			discurso</a> que tantos meses llevas preparando:</p>",
-			{
-				actions: {
-					'discurso': "<p class='dialogo personaje'>- Â¡La princesa estÃ¡ dormida! Â¿A quÃ© hora se habrÃ¡ acostado la princesa?<br/>\
-			Â¡Mi bien, mi sol, mi estrella, mi planeta, mi satÃ©lite, mi polvo espacial, mi agujero negro, mi bosÃ³n de Higgs!\<br/>\
-			Si de tu dulce boca a bien tuvieras susurrar palabras que alentaran el corazÃ³n de este, vuestro humilde servidor, \
-			ante los antiguos dioses y tambiÃ©n ante los modernos, amor sin par os jurarÃ­a. Un amor puro, cual no hubo ni habrÃ¡; \
-			un amor del cual se forjarÃ¡n leyendas; un amor que durarÃ¡ toda la eternidad, o en su defecto hasta que amanezca.<br/>\
-			Decidme, mi pequeÃ±o pastel de fresa con guinda de chocolate: Â¿me amÃ¡is?</p>\
-			<p>Al tiempo que terminas tu discurso, una enorme figura de 150 kilos se gira en la cama, y su barbuda cara se\
-			acerca a la tuya para decir:</p>\
-			<p class='dialogo'><strong>- Â¡Â¡A mÃ­ la guardia!!</strong></p>\
-			<p>Efectivamente: estabas en la habitaciÃ³n del rey, no la de la princesa.</p>\
-			<p>Sin saber muy bien de donde, aparece la guardia personal del rey que, con sus caracterÃ­sticas dulzura y\
-			amabilidad te invita <a href='calabozo'>a pudrirte en el calabozo</a>.</p>"
-				}
-			}
-			
-		),			
+		),	
 		habnollave: new undum.SimpleSituation(
 			"<p><strong>Â¡Â¡LÃ¡stima que no tengas ninguna llave!!</strong></p>\
 			 <p>Pero una vez que has llegado hasta aquÃ­, no vas a cejar en tu empeÃ±o por unos mÃ­seros gramos de metal.</p>\
@@ -258,20 +203,6 @@ undum.game.situations = {
 			}
 		),
 
-		habprincesa: new undum.SimpleSituation(
-			"<h1>El aposento de la derecha</h1>\
-			<p>Tras subir las escaleras que quedaban a tu derecha, accedes a uno de los aposentos... o mÃ¡s bien, a la puerta del mismo.\
-			Con tiento y cuidado, intentas hacer girar el picaporte y te das cuenta de que la puerta estÃ¡ cerrada con llave.</p>",
-			{
-				enter:function( character, system, from ) {
-					if( character.qualities.llave ) {
-						system.doLink( "habprincesallave");
-					} else {
-						system.doLink( "habnollave");
-					}
-				}
-			}
-		),
 		habprincesallave: new undum.SimpleSituation(
 			"<p>Con suma destreza, gran sigilo y la llave que te agenciaste, consigues abrir la puerta y entras cautelosamente en la estancia.</p>\
 			<p>Al fondo, a la derecha, observas que hay un lecho en el que alguien duerme placenteramente; te acercas\
