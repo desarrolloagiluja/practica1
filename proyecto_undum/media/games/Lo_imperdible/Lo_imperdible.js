@@ -32,13 +32,19 @@ jQuery.fx.off=true
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation (
-	"<h1>El castillo está¡ cerrado a cal y canto... aunque te piden el santo y seÃ±a:</h1>\
-	<p class='dialogo'>- Â¿CuÃ¡nto son 3+4?</p>\
-    <p>Ante tamaÃ±a afrenta tu respuesta podrÃ­a ser  \
-    <a href='incorrecta01'>que no te has traido la calculadora</a>, y tambiÃ©n que 3+4 <a href='patiodearmas'>suman 7</a> \
-	(a juzgar por los 4 dedos levantados de tu mano derecha y los 3 de la izquierda), \
-	aunque tampoco estarÃ­a mal confesar que \
-	<a href='incorrecta02'>aquel dÃ­a no fuiste a la escuela</a> pues te quedaste cuidando a tu lobo huargo.</p>"
+	"<h1>Vuelta a casa</h1>\
+    <p>Volvía de hacer la compra, pesaban un poco pero no era algo que molestase mucho.  \
+    Llegué a casa y me dispuse a abrir la puerta, pero surgió un problema, no encontraba las llaves.<br/>\
+	Estaba completamente seguro que las había cogido por la mañana.<br/>\
+	Necesitaba entrar, supongo que podría <a href='./bolsas' class='once'>buscar en las bolsas de la compra</a>, tambien miré mi móvil, tenía el número de teléfono \
+	del cerrajero para llamarlo o podría ir a casa de la vecina, quizás me puede dejar colarme en casa.</p>",
+	  {
+	    actions: {
+                'bolsas': function( character, system, action) {
+					system.setCharacterText( "<p>No las encuentro aquí, no tiene sentido que las guardase con la compra</p>" );
+				}
+	    }   
+	  }
 	),
 	
 	incorrecta01: new undum.SimpleSituation(
@@ -99,6 +105,7 @@ undum.game.situations = {
 		),
 		caballerizas: new undum.SimpleSituation(
 			"<h1>Las caballerizas</h1>\
+			<p class='dialogo'>- Â¿CuÃ¡nto son 3+4?</p>\
 			<p>El establo es el lugar ideal para encontrar caballos... Â¡Â¡y todo tipo de enseres!! \
 			Ya se sabe, empieza uno con el castillo bien ordenadito, y terminas guardando aquÃ­ todo lo que no te hace falta.</p>\
 			<p>No obstante, quizÃ¡ haya algo que te venga bien y que desees coger: \
@@ -296,6 +303,6 @@ undum.game.qualityGroups = {
 undum.game.init = function(character, system) {
     system.setQuality( "antorcha" , false )
     system.setQuality( "llave" , false )
-    system.setCharacterText("<p>Â¡Comienzas tu fascinante aventura!</p>");
+    system.setCharacterText("<p> </p>");
 };
 
