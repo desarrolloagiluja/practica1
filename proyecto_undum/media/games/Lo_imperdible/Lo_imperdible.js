@@ -33,11 +33,11 @@ jQuery.fx.off=true
 undum.game.situations = {
     start: new undum.SimpleSituation (
 	"<h1>Vuelta a casa</h1>\
-    <p>Volvía de hacer la compra, pesaban un poco pero no era algo que molestase mucho.  \
+    <p>Volvía de hacer unas compras, pesaban un poco pero no era algo que molestase mucho.  \
     Llegué a casa y me dispuse a abrir la puerta, pero surgió un problema, no encontraba las llaves.<br/>\
 	Estaba completamente seguro que las había cogido por la mañana.<br/>\
-	Necesitaba entrar, supongo que podría <a href='./bolsas' class='once'>buscar en las bolsas de la compra</a>, tambien miré mi móvil, tenía el número de teléfono \
-	del cerrajero para llamarlo o podría ir a casa de la vecina, quizás me puede dejar colarme en casa.</p>",
+	Necesitaba entrar, porque es demasiado tarde y es de noche. Supongo que podría <a href='./bolsas' class='once'>buscar en las bolsas de la compra</a>, tambien miré mi móvil, tenía el número de teléfono \
+	del cerrajero para <a href='llamar'>llamarlo</a> o podría ir a casa de la vecina, quizás me puede dejar <a href='balcon'>colarme por el balcón</a>.</p>",
 	  {
 	    actions: {
                 'bolsas': function( character, system, action) {
@@ -45,6 +45,33 @@ undum.game.situations = {
 				}
 	    }   
 	  }
+	),
+	
+	llamar: new undum.SimpleSituation(
+		"<p>Abro la agenda de mi móvil y veo que tengo a dos contactos cerrajeros</p>\
+		<p class='dialogo personaje'>- Joder... ¿Y ahora a quien llamo?</p>\
+		<p>Vuelvo a mirar la agenda y pienso que a Juan (uno de los cerrajeros) le debo más de 1000 euros por otras cerraduras que me cambió en el pasado y le dejé sin pagar.</p>\
+		<p>Alfonso, que el otro cerrajero, trabaja a poco más de dos horas de aquí y no creo que pueda venir así tan improvisto y menos siendo las horas que son...</p>\
+		<p>En fin... tengo que decidirme...¿ <a href='cerrajero01'>Juan</a> o <a href='cerrajero02'>Alfonso</a> ? </p>s"
+	),
+	
+	cerrajero01: new undum.SimpleSituation(
+		"<p>Juan no coge el telefono... Me estoy empezando a agobiar... Creo que tendré que esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> si quiero dormir esta noche en mi casa</p>s"
+		
+	), 
+	
+	cerrajero02: new undum.SimpleSituation(
+		"<p>Alfonso me ha cogido el telefono, pero me ha dicho que siendo la hora que es, no podría puesto que está bastante lejos y lleva todo el día fuera... Sólo me queda esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> si quiero dormir esta noche en mi casa </p>\
+		<p>Pero por otra parte pienso que no tengo confianza con el vecino para que me deje colarme por el balcon y entrar mi casa por el balcón, y eso le puede suponer a él un riesgo... Por tanto tambíen he pensado en la posibilidad de <a href='esperar'>esperar al día siguiente</a> en el portal hasta que pueda venir el cerrajero</p>s"
+	),
+	
+	esperar: new undum.SimpleSituation(
+		"<p>Me hallo esperando y son las 9 de la noche y me acaba de llamar el cerrajero y dice que puede ir aunque sea tarde </p>s"
+	),
+
+	balcon: new undum.SimpleSituation(
+		"<p>He llamado al portero del vecino y no ha contestado nadie, puede ser que sea porque no esté el hijo de mi vecina. Esta vecina tiene 90 años y no puede abrir la puerta puesto que tiene un problema de cadera y está inmovilizada</p>s"
+	
 	),
 	
 	incorrecta01: new undum.SimpleSituation(
