@@ -3,7 +3,7 @@
 >     GitLab
 
 -  	GitLab ofrece numerosas y útiles caracteristicas en su DVCS (Control 	distribuido de versiones) y una pagina web de proyecto. Las continuas 	capacidades de integración de GitLab automatizan el analisis y la entrega del 	código, lo que permite ahorrar tiempo en la fase de prueba. Con un visor de 	código, pull requests y un práctico método para solucionar conflictos. GitLab 	permite acceder a todos los aspectos importantes de tu proyecto. La 	aplicación está escrita en Ruby.
-![alt text](../imagenes/slack1.png "texto") 
+![alt text](https://raw.githubusercontent.com/desarrolloagiluja/practica1/Develop/Alternativas/imagenes/slack1.png "texto") 
   
 >     SourceForge
 
