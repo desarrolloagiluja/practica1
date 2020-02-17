@@ -4,11 +4,14 @@
 
 -  	GitLab ofrece numerosas y útiles caracteristicas en su DVCS (Control 	distribuido de versiones) y una pagina web de proyecto. Las continuas 	capacidades de integración de GitLab automatizan el analisis y la entrega del 	código, lo que permite ahorrar tiempo en la fase de prueba. Con un visor de 	código, pull requests y un práctico método para solucionar conflictos. GitLab 	permite acceder a todos los aspectos importantes de tu proyecto. La 	aplicación está escrita en Ruby.
 
+![GitLab](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/Gitlab.PNG?raw=true "GitLab") 
+
   
 >     SourceForge
 
 -   SourceForge estaba en el mercado antes de GitHub y de muchas alternativas open source y hubo una época en la que estaba considerada como la primera opción de código abierto. En 2015 esta empresa tuvo problemas con el malware, pero a comienzos de 2016 fue por un buen camino. Actualmente, SourceForge ofrece la autenticación multifactor, lo que amortiza con una orientcación  generalmente segura. Entre las caracteristicas adicionales que pone a disposición de los usuarios se encuentran el sistema de seguimiento de incidentes y una lista de código incorporada. 
-    
+![SourceForge](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/SourceForge.PNG?raw=true "SourceForge")     
+
 >     Ventajas e inconvenientes de utilizar GitHub
 
 -   Una de las principales ventajas que tiene gitHub es que pone a disposición a todos los usuarios de repositorios de código públicos y libres sin límites. Pero el mantenimiento que requiere estos repositorios está sujeto a un pago de una suscripción mensual. También ofrece la posibilidad de crear "organizaciones" que hacen las veces de cuentas regulares a menos que tengas como mínimo una cuenta de usuario de tu propiedad
@@ -19,10 +22,12 @@
 >     Discord
 
 -   Discord es una aplicación de Voz sobre protocolo de internet y comunicación por mensajes gratuita. Discord se ejecuta en Windows, MacOS, Android, iOS, Linux y tiene la posibilidad de ser usado desde el software creado para dicho programa o puede ser usado directamente desde el navegador. Además dispone de código abierto con lo que se pueden programar diferentes addons o incluso usar los ya existente para añadir funcionalidad.
+![Discord](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/Discord.PNG?raw=true "Discord")   
 
 >     Hibox
 
 -   Aplicación de comunicación por chat y voz de enorme similitud con Slack, dispone de integración con gran cantidad de aplicaciones y programas utilizados de manera común además de estar disponible para dispositivos portátiles de manera compartida con el ordenador. Dispone tambien de videoconferencia junto con el propio chat de Hibox para mantener una comunicación fluida.
+![Hibox](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/hibox.png?raw=true "Hibox")   
 
 >     Ventajas e inconvenientes de utilizar Slack
 
@@ -34,14 +39,43 @@
 
 -   Es una aplicacion visual de gestión de proyectos basada en la metodología Kanban (desarrollo). El objetivo que tiene esta aplicación  es ayudar a la gente y optimizar el volumen de trabajo, colaborar en tiempo real y mejorar el desempeño de forma constante
 -    Las principales caracteristicas que posee esta herramienta son: Visualización del flujo de trabajo, colaboración en equipo en tiempo real, identificación y eliminación de los cuellos de botella, análisis, predicciones del tiempo de trabajo y el conocimiento del estado de un proyecto.  
+![Kanban tool](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/kanban.jpg?raw=true "Kanban tool")   
 
 >     Jira
 
 -   Software de seguimiento de proyectos e incidencias, que se permite visualizar el flujo de trabajo y optimizar el tiempo dedidcado a cada parte del trabajo. Tiene una presentación sencilla similar a Trello. Jira posee tableros de scrum y kanban, registros de auditoría y almacenamiento en la nube para los archivos que se quieran intercambiar.
 -   Posee diferentes niveles de privilegios, desde gratuito hasta premium cambiando el coste por usuario por mes añadiendo más permisos y facilidades al trabajo
+![Jira](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/jira.png?raw=true "Jira")   
 
 >     Ventajas e inconvenientes de utilizar Trello
 
 -   La ventaja de Trello es su simplicidad (no de simple sino de sencillez), que permite sin mucho conocimiento poder adentrarse y crear tareas a la par que entenderlas sin necesidad de mucho tiempo dedicado al mismo.
 
 
+## Utilización de Slack y Trello ##
+
+Vamos a mostrar algunas imágenes de como ha evolucionado o como ha sido el uso de Trello y Slack en nuestro caso:
+
+>Slack
+
+![Slack1](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/slack1.png?raw=true "Slack inicio")  
+Inicio de slack
+
+
+![Slack2](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/slack2.png?raw=true "Slack uso")  
+Uso de slack
+
+
+>Trello
+
+
+![Trello1](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/trello1.png?raw=true "Inicio Trello")  
+Inicio Trello
+
+
+![Trello2](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/trello2.png?raw=true "Uso de Trello")  
+Uso de Trello
+
+
+![Trello4](https://github.com/desarrolloagiluja/practica1/blob/Develop/Alternativas/imagenes/trello4.png?raw=true "Trello avanzado")  
+Trello avanzado
