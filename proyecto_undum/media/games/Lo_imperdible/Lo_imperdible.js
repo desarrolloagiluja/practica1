@@ -86,10 +86,25 @@ undum.game.situations = {
 
 	balcon: new undum.SimpleSituation(
 		"<p>He llamado al portero del vecino y no ha contestado nadie, puede ser que sea porque no esté el hijo de mi vecina.\
-		Esta vecina tiene 90 años y no puede abrir la puerta puesto que tiene un problema de cadera y está inmovilizada</p>s"
+		Esta vecina tiene 90 años y no puede abrir la puerta puesto que tiene un problema de cadera y está inmovilizada\
+		<br/>Tendré que <a href='esperarhijo'>esperar a su hijo</a> a que venga a casa para poder llegar o <a href='./agil' class='once'>quizás...</a></p>",
+		{
+	    actions: {
+                'agil': function( character, system, action) {
+					system.setCharacterText( "<p>Aún soy jóven y de pequeño me dedicaba a escalar árboles, estoy seguro \
+					que desde el que esta al lado podría <a href='arbol' class='once'>saltar</a></p>" );
+				}
+	    }   
+	  }
 	
 	),
-	
+	esperarhijo: new undum.SimpleSituation(
+		"<p>No parecía que el hijo fuese a llegar temprano, porque llevaba un buen rato esperando. Miré de nuevo el móvil \
+		y tendría que llamar a alguien, aunque no es que tuviese muchas opciones disponibles, el <a href=''>casero</a> era una de ellas, por poco que me gustase.\
+		Sinó tendria que ver si al final Juan el <a href=''>cerrajero</a> me puede cojer el teléfono, porque no había demasiadas opciones disponibles.\
+		Llorar o patalear no iba a servir, aún podía escalar árboles, estoy seguro \
+		que desde el que esta al lado podría <a href='arbol' class='once'>saltar</a></</p>"
+	),
 	arbol: new undum.SimpleSituation(
 		"<p>No iba a conseguir nada esperando, tenía que ponerme en marcha, así que me armé de valor.\
 		Sabía un poco de deporte, así que comencé a escalar el árbol cercano a casa.\
