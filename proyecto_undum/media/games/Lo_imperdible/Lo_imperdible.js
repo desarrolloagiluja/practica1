@@ -88,6 +88,29 @@ undum.game.situations = {
 	
 	),
 	
+	arbol: new undum.SimpleSituation(
+		"<p>No iba a conseguir nada esperando, tenía que ponerme en marcha, así que me armé de valor.\
+		Sabía un poco de deporte, así que comencé a escalar el árbol cercano a casa.\
+		Cogí un poco de fuerza antes de saltar desde la rama hasta el balcón.\
+		Pero no llegué, caí malamente y he tenido que llamar a la ambulancia, esta noche la pasaría en el hospital y con una pierna escayolada. </p>\
+		<br/>\
+		<h1>FIN</h1>"
+	),
+	
+	cerrajeroSI: new undum.SimpleSituation(
+		"<p>Le dije que si al cerrajero, era mi oportunidad de poder volver a casa, estaba ansioso y ya me daba igual gastarme dinero en ello.\
+		Así que podría dormir en casa aunque con unos cuantos euros menos en el bolsillo, pero al menos el día acabaría ya.</p>\
+		<br/>\
+		<h1>FIN</h1>"
+	),
+	cerrajeroNO: new undum.SimpleSituation(
+		"<p>Le dije que si al cerrajero, era mi oportunidad de poder volver a casa, estaba ansioso y ya me daba igual gastarme dinero en ello.\
+		Así que podría dormir en casa aunque con unos cuantos euros menos en el bolsillo, pero al menos el día acabaría ya.</p>\
+		<br/>\
+		<h1>FIN</h1>"
+	),
+	
+	
 	incorrecta01: new undum.SimpleSituation(
 	"<p>Tras buscar por largo rato entre tus pertenencias, con voz que transmite poca tranquilidad dices a los guardias de la puerta:</p>\
 	<p class='dialogo personaje'>- Fijaos que pertrechÃ© mi montura con toda suerte de abalorios, mÃ¡s olvideme el calculatorum...</p>\
