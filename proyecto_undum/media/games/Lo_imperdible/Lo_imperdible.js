@@ -51,7 +51,7 @@ undum.game.situations = {
 		"<p>Abro la agenda de mi móvil y veo que tengo a dos contactos cerrajeros</p>\
 		<p>Vuelvo a mirar la agenda y pienso que a Juan (uno de los cerrajeros) le debo más de 1000 euros por otras cerraduras que me cambió en el pasado y le dejé sin pagar.</p>\
 		<p>Alfonso, que el otro cerrajero, trabaja a poco más de dos horas de aquí y no creo que pueda venir así tan improvisto y menos siendo las horas que son...</p>\
-		<p>En fin... tengo que decidirme...¿ <a href='./cerrajero01'>Juan</a> o <a href='cerrajero02'>Alfonso</a> ? </p>s",
+		<p>En fin... tengo que decidirme...¿ <a href='./cerrajero01' class='once'>Juan</a> o <a href='cerrajero02'>Alfonso</a> ? </p>s",
 		{	actions: {
 			
 				'cerrajero01': function( character, system, action) {
@@ -75,11 +75,17 @@ undum.game.situations = {
 		si quiero dormir esta noche en mi casa </p>\
 		<p>Pero por otra parte pienso que no tengo confianza con el vecino para que me deje colarme por el balcon y entrar mi casa \
 		por el balcón, y eso le puede suponer a él un riesgo... Por tanto tambíen he pensado en la posibilidad de <a href='esperar'>esperar \
-		al día siguiente</a> en el portal hasta que pueda venir el cerrajero</p>s"
+		al día siguiente</a> en el portal hasta que pueda venir el cerrajero</p>s",
+		{
+			enter: function( character, system, form ) {
+				system.setCharacterText("<p></p>");
+			
+			}
+		}
 	),
 	
 	esperar: new undum.SimpleSituation(
-		"<p>Me hallo esperando y son las 9 de la noche y me acaba de llamar el cerrajero y dice que puede ir aunque sea tarde\
+		"<p>Espera que te espera y son las 9 de la noche, me acaba de llamar el cerrajero y dice que puede ir aunque sea tarde\
 		 pero, ¿De verdad me merece la pena <a href='cerrajerosi'>aceptar que venga</a> y pagar un dineral para que me cambie la cerradura por enésima vez o\
 		 decirle que <a href='cerrajerono'>no hace falta</a> y buscarme la vida de otra manera que no sea pagando? </p>s"
 	),
@@ -100,8 +106,8 @@ undum.game.situations = {
 	),
 	esperarhijo: new undum.SimpleSituation(
 		"<p>No parecía que el hijo fuese a llegar temprano, porque llevaba un buen rato esperando. Miré de nuevo el móvil \
-		y tendría que llamar a alguien, aunque no es que tuviese muchas opciones disponibles, el <a href=''>casero</a> era una de ellas, por poco que me gustase.\
-		Sinó tendria que ver si al final Juan el <a href=''>cerrajero</a> me puede cojer el teléfono, porque no había demasiadas opciones disponibles.\
+		y tendría que llamar a alguien, aunque no es que tuviese muchas opciones disponibles, el <a href='nollavesrespuesto'>casero</a> era una de ellas, por poco que me gustase.\
+		Sinó tendria que ver si al final Juan el <a href='nocambiacerradura'>cerrajero</a> me puede cojer el teléfono, porque no había demasiadas opciones disponibles.\
 		Llorar o patalear no iba a servir, aún podía escalar árboles, estoy seguro \
 		que desde el que esta al lado podría <a href='arbol' class='once'>saltar</a></</p>"
 	),
@@ -131,14 +137,15 @@ undum.game.situations = {
 	
 	nocambiacerradura: new undum.SimpleSituation(
 		"<p>Tras llamar al cerrajero, este le responde que no le va a cambiar la cerradura puesto que le debe bastante dinero y ya\
-		  son demasiadas veces que le ha cambiado la cerradura. Por tanto, tengo que decidirme si pagar al cerrajero la cantidad de 1320 euros\
-		  o llamar a mi casero para ver si tiene alguna llave de repuesto.</p>"
+		  son demasiadas veces que le ha cambiado la cerradura. Por tanto, tengo que decidirme <a href='cerrajerosi'>si pagar al cerrajero</a> la cantidad de 1320 euros\
+		  o llamar a mi <a href='nollavesrespuesto'>casero</a> para ver si tiene alguna llave de repuesto.</p>"
 	
 	),
 	nollavesrespuesto: new undum.SimpleSituation(
 		"<p> Responde el casero y yo le pregunto con miedo si tendría por casualidad otras llaves de repuesto ya que las que tenia, eran\
 		otras de repuesto de mi casero. Él me responde que no, no tiene otras, que si he perdido las llaves que asuma mi responsabilidad \
-		y llame al cerrajero y le pague todo lo que le debo. Pero pensándolo bien... y si en vez de pagarle, ¿me hago el valiente y me subo por el árbol trepando?</p>"
+		y <a href='cerrajerosi'>llame al cerrajero y le pague todo lo que le debo</a>. Pero pensándolo bien... y si en vez de pagarle, ¿me hago\
+		el valiente y me subo por el árbol <a href='arbol'>trepando?</a></p>"
 	),
 	
 	incorrecta01: new undum.SimpleSituation(
