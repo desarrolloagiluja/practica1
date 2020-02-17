@@ -49,20 +49,33 @@ undum.game.situations = {
 	
 	llamar: new undum.SimpleSituation(
 		"<p>Abro la agenda de mi móvil y veo que tengo a dos contactos cerrajeros</p>\
-		<p class='dialogo personaje'>- Joder... ¿Y ahora a quien llamo?</p>\
 		<p>Vuelvo a mirar la agenda y pienso que a Juan (uno de los cerrajeros) le debo más de 1000 euros por otras cerraduras que me cambió en el pasado y le dejé sin pagar.</p>\
 		<p>Alfonso, que el otro cerrajero, trabaja a poco más de dos horas de aquí y no creo que pueda venir así tan improvisto y menos siendo las horas que son...</p>\
-		<p>En fin... tengo que decidirme...¿ <a href='cerrajero01'>Juan</a> o <a href='cerrajero02'>Alfonso</a> ? </p>s"
+		<p>En fin... tengo que decidirme...¿ <a href='./cerrajero01'>Juan</a> o <a href='cerrajero02'>Alfonso</a> ? </p>s",
+		{	actions: {
+			
+				'cerrajero01': function( character, system, action) {
+					system.setCharacterText( "<p>Juan no coge el telefono... Me estoy empezando a agobiar... Creo que tendré que esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> si quiero dormir esta noche en mi casa</p>s" );
+				}
+				
+			},
+			
+			enter: function( character, system, form ) {
+				system.setCharacterText("<p>- Joder... ¿Y ahora a quien llamo?</p>");
+			
+			}
+		}
+		
 	),
 	
-	cerrajero01: new undum.SimpleSituation(
-		"<p>Juan no coge el telefono... Me estoy empezando a agobiar... Creo que tendré que esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> si quiero dormir esta noche en mi casa</p>s"
-		
-	), 
 	
-	cerrajero02: new undum.SimpleSituation(
-		"<p>Alfonso me ha cogido el telefono, pero me ha dicho que siendo la hora que es, no podría puesto que está bastante lejos y lleva todo el día fuera... Sólo me queda esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> si quiero dormir esta noche en mi casa </p>\
-		<p>Pero por otra parte pienso que no tengo confianza con el vecino para que me deje colarme por el balcon y entrar mi casa por el balcón, y eso le puede suponer a él un riesgo... Por tanto tambíen he pensado en la posibilidad de <a href='esperar'>esperar al día siguiente</a> en el portal hasta que pueda venir el cerrajero</p>s"
+	cerrajero02: new undum.SimpleSituation( 				
+		"<p>Alfonso me ha cogido el telefono, pero me ha dicho que siendo la hora que es, no podría puesto que está bastante lejos \
+		y lleva todo el día fuera... Sólo me queda esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> \
+		si quiero dormir esta noche en mi casa </p>\
+		<p>Pero por otra parte pienso que no tengo confianza con el vecino para que me deje colarme por el balcon y entrar mi casa \
+		por el balcón, y eso le puede suponer a él un riesgo... Por tanto tambíen he pensado en la posibilidad de <a href='esperar'>esperar \
+		al día siguiente</a> en el portal hasta que pueda venir el cerrajero</p>s"
 	),
 	
 	esperar: new undum.SimpleSituation(
@@ -70,7 +83,8 @@ undum.game.situations = {
 	),
 
 	balcon: new undum.SimpleSituation(
-		"<p>He llamado al portero del vecino y no ha contestado nadie, puede ser que sea porque no esté el hijo de mi vecina. Esta vecina tiene 90 años y no puede abrir la puerta puesto que tiene un problema de cadera y está inmovilizada</p>s"
+		"<p>He llamado al portero del vecino y no ha contestado nadie, puede ser que sea porque no esté el hijo de mi vecina.\
+		Esta vecina tiene 90 años y no puede abrir la puerta puesto que tiene un problema de cadera y está inmovilizada</p>s"
 	
 	),
 	
