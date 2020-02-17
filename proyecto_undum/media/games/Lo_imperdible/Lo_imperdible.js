@@ -79,7 +79,9 @@ undum.game.situations = {
 	),
 	
 	esperar: new undum.SimpleSituation(
-		"<p>Me hallo esperando y son las 9 de la noche y me acaba de llamar el cerrajero y dice que puede ir aunque sea tarde </p>s"
+		"<p>Me hallo esperando y son las 9 de la noche y me acaba de llamar el cerrajero y dice que puede ir aunque sea tarde\
+		 pero, ¿De verdad me merece la pena <a href='cerrajerosi'>aceptar que venga</a> y pagar un dineral para que me cambie la cerradura por enésima vez o\
+		 decirle que <a href='cerrajerono'>no hace falta</a> y buscarme la vida de otra manera que no sea pagando? </p>s"
 	),
 
 	balcon: new undum.SimpleSituation(
@@ -97,19 +99,32 @@ undum.game.situations = {
 		<h1>FIN</h1>"
 	),
 	
-	cerrajeroSI: new undum.SimpleSituation(
+	cerrajerosi: new undum.SimpleSituation(
 		"<p>Le dije que si al cerrajero, era mi oportunidad de poder volver a casa, estaba ansioso y ya me daba igual gastarme dinero en ello.\
 		Así que podría dormir en casa aunque con unos cuantos euros menos en el bolsillo, pero al menos el día acabaría ya.</p>\
 		<br/>\
 		<h1>FIN</h1>"
 	),
-	cerrajeroNO: new undum.SimpleSituation(
-		"<p>Le dije que si al cerrajero, era mi oportunidad de poder volver a casa, estaba ansioso y ya me daba igual gastarme dinero en ello.\
-		Así que podría dormir en casa aunque con unos cuantos euros menos en el bolsillo, pero al menos el día acabaría ya.</p>\
+	cerrajerono: new undum.SimpleSituation(
+		"<p>No quería gastar más dinero, no es que me sobrara mucho. Esperaría un rato en la puerta, no sabía cuánto tiempo, \
+		quizás alguien encontraba las \
+		llaves o el casero se acercaba, pero me quedaría junto a la puerta sentado.</p>\
 		<br/>\
 		<h1>FIN</h1>"
 	),
 	
+	
+	nocambiacerradura: new undum.SimpleSituation(
+		"<p>Tras llamar al cerrajero, este le responde que no le va a cambiar la cerradura puesto que le debe bastante dinero y ya\
+		  son demasiadas veces que le ha cambiado la cerradura. Por tanto, tengo que decidirme si pagar al cerrajero la cantidad de 1320 euros\
+		  o llamar a mi casero para ver si tiene alguna llave de repuesto.</p>"
+	
+	),
+	nollavesrespuesto: new undum.SimpleSituation(
+		"<p> Responde el casero y yo le pregunto con miedo si tendría por casualidad otras llaves de repuesto ya que las que tenia, eran\
+		otras de repuesto de mi casero. Él me responde que no, no tiene otras, que si he perdido las llaves que asuma mi responsabilidad \
+		y llame al cerrajero y le pague todo lo que le debo. Pero pensándolo bien... y si en vez de pagarle, ¿me hago el valiente y me subo por el árbol trepando?</p>"
+	),
 	
 	incorrecta01: new undum.SimpleSituation(
 	"<p>Tras buscar por largo rato entre tus pertenencias, con voz que transmite poca tranquilidad dices a los guardias de la puerta:</p>\
