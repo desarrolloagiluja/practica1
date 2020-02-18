@@ -27,12 +27,13 @@ undum.game.fadeSpeed = 1500
 undum.game.slideUpSpeed = 500
 
 // En modo depuraciÃ³n, que no haya efectos de jquery
-jQuery.fx.off=true
+
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation (
 	"<h1>Vuelta a casa</h1>\
+	<br>\
     <p>Volvía de hacer unas compras, pesaban un poco pero no era algo que molestase mucho.  \
     Llegué a casa y me dispuse a abrir la puerta, pero surgió un problema, no encontraba las llaves.<br/>\
 	Estaba completamente seguro que las había cogido por la mañana.<br/>\
@@ -70,13 +71,15 @@ undum.game.situations = {
 	
 	
 	cerrajero02: new undum.SimpleSituation( 				
-		"<p>Alfonso me ha cogido el telefono, pero me ha dicho que siendo la hora que es, no podría puesto que está bastante lejos \
-		y lleva todo el día fuera... Sólo me queda esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> \
+		"<p>Alfonso me ha cogido el telefono\
+		<p class='dialogo'>- Viendo las horas que son y el trabajo que me queda, creo que no podría para hoy, en el caso de que pueda te llamaré, lo siento</a>.</p>\
+		Sólo me queda esperar a que venga el vecino para poder <a href='./balcon'>colarme por el balcon</a> \
 		si quiero dormir esta noche en mi casa </p>\
 		<p>Pero por otra parte pienso que no tengo confianza con el vecino para que me deje colarme por el balcon y entrar mi casa \
 		por el balcón, y eso le puede suponer a él un riesgo... Por tanto tambíen he pensado en la posibilidad de <a href='esperar'>esperar \
 		al día siguiente</a> en el portal hasta que pueda venir el cerrajero</p>s",
 		{
+			
 			enter: function( character, system, form ) {
 				system.setCharacterText("<p></p>");
 			
@@ -85,8 +88,9 @@ undum.game.situations = {
 	),
 	
 	esperar: new undum.SimpleSituation(
-		"<p>Espera que te espera y son las 9 de la noche, me acaba de llamar el cerrajero y dice que puede ir aunque sea tarde\
-		 pero, ¿De verdad me merece la pena <a href='cerrajerosi'>aceptar que venga</a> y pagar un dineral para que me cambie la cerradura por enésima vez o\
+		"<p>Espera que te espera y son las 9 de la noche, me acaba de llamar el cerrajero\
+		 <p class='dialogo'>- Puedo ir a cambiarte la cerradura aunque sea tarde, no me gustaria que durmieras fuera de casa</p>\
+		¿De verdad me merece la pena <a href='cerrajerosi'>aceptar que venga</a> y pagar un dineral para que me cambie la cerradura por enésima vez o\
 		 decirle que <a href='cerrajerono'>no hace falta</a> y buscarme la vida de otra manera que no sea pagando? </p>s"
 	),
 
@@ -132,7 +136,9 @@ undum.game.situations = {
 	),
 	
 	cerrajerosi: new undum.SimpleSituation(
-		"<p>Le dije que si al cerrajero, era mi oportunidad de poder volver a casa, estaba ansioso y ya me daba igual gastarme dinero en ello.\
+	
+		"<p> <p class='dialogo'>- Acepto, te pagaré</p>\
+		era mi oportunidad de poder volver a casa, estaba ansioso y ya me daba igual gastarme dinero en ello.\
 		Así que podría dormir en casa aunque con unos cuantos euros menos en el bolsillo, pero al menos el día acabaría ya.</p>\
 		<br/>\
 		<h1>FIN</h1>"
@@ -153,9 +159,11 @@ undum.game.situations = {
 	
 	),
 	nollavesrespuesto: new undum.SimpleSituation(
-		"<p> Responde el casero y yo le pregunto con miedo si tendría por casualidad otras llaves de repuesto ya que las que tenia, eran\
-		otras de repuesto de mi casero. Él me responde que no, no tiene otras, que si he perdido las llaves que asuma mi responsabilidad \
-		y <a href='cerrajerosi'>llame al cerrajero y le pague todo lo que le debo</a>. Pero pensándolo bien... y si en vez de pagarle, ¿me hago\
+		"<p> Responde el casero y le pregunto: \
+		<p class='dialogo'>- Señor, ¿usted tiene por casualidad otras llaves de repuesto?</p>\		\
+		Él me responde lo siguiente: \
+		<p class='dialogo'>- Asume tu responsabilidad, si has perdido las llaves, <a href='cerrajerosi'>llama al cerrajero y le pague todo lo que le debo</a>.</p>\
+		Pero pensándolo bien... y si en vez de pagarle, ¿me hago\
 		el valiente y me subo por el árbol <a href='arbol'>trepando?</a></p>"
 	)
 };
