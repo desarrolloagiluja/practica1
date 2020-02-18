@@ -71,9 +71,9 @@ undum.game.situations = {
 	
 	
 	cerrajero02: new undum.SimpleSituation( 				
-		"<p>Alfonso me ha cogido el telefono\
-		<p class='dialogo'>- Viendo las horas que son y el trabajo que me queda, creo que no podría para hoy, en el caso de que pueda te llamaré, lo siento</a>.</p>\
-		Sólo me queda esperar a que venga el vecino para poder <a href='./balcon'>colarme por el balcon</a> \
+		"<p>Alfonso me ha cogido el telefono</p>\
+		<p class='dialogo'>- Viendo las horas que son y el trabajo que me queda, creo que no podría para hoy, en el caso de que pueda te llamaré, lo siento.</p>\
+		<p>Sólo me queda esperar a que venga el vecino para poder <a href='balcon'>colarme por el balcon</a> \
 		si quiero dormir esta noche en mi casa </p>\
 		<p>Pero por otra parte pienso que no tengo confianza con el vecino para que me deje colarme por el balcon y entrar mi casa \
 		por el balcón, y eso le puede suponer a él un riesgo... Por tanto tambíen he pensado en la posibilidad de <a href='esperar'>esperar \
@@ -88,9 +88,9 @@ undum.game.situations = {
 	),
 	
 	esperar: new undum.SimpleSituation(
-		"<p>Espera que te espera y son las 9 de la noche, me acaba de llamar el cerrajero\
+		"<p>Espera que te espera y son las 9 de la noche, me acaba de llamar el cerrajero</p>\
 		 <p class='dialogo'>- Puedo ir a cambiarte la cerradura aunque sea tarde, no me gustaria que durmieras fuera de casa</p>\
-		¿De verdad me merece la pena <a href='cerrajerosi'>aceptar que venga</a> y pagar un dineral para que me cambie la cerradura por enésima vez o\
+		<p>¿De verdad me merece la pena <a href='cerrajerosi'>aceptar que venga</a> y pagar un dineral para que me cambie la cerradura por enésima vez o\
 		 decirle que <a href='cerrajerono'>no hace falta</a> y buscarme la vida de otra manera que no sea pagando? </p>s"
 	),
 
@@ -159,11 +159,11 @@ undum.game.situations = {
 	
 	),
 	nollavesrespuesto: new undum.SimpleSituation(
-		"<p> Responde el casero y le pregunto: \
-		<p class='dialogo'>- Señor, ¿usted tiene por casualidad otras llaves de repuesto?</p>\		\
-		Él me responde lo siguiente: \
-		<p class='dialogo'>- Asume tu responsabilidad, si has perdido las llaves, <a href='cerrajerosi'>llama al cerrajero y le pague todo lo que le debo</a>.</p>\
-		Pero pensándolo bien... y si en vez de pagarle, ¿me hago\
+		"<p> Responde el casero y le pregunto: </p>\
+		<p class='dialogo'>- Señor, ¿usted tiene por casualidad otras llaves de repuesto?</p>\
+		<p>Él me responde lo siguiente: </p>\
+		<p class='dialogo'>- Asume tu responsabilidad, si has perdido las llaves, <a href='cerrajerosi'>llama al cerrajero y págale todo lo que le debes</a>.</p>\
+		<p>Pero pensándolo bien... y si en vez de pagarle, ¿me hago\
 		el valiente y me subo por el árbol <a href='arbol'>trepando?</a></p>"
 	)
 };
